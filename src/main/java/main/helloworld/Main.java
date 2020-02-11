@@ -1,7 +1,5 @@
 package main.helloworld;
 
-import java.util.Scanner;
-
 /**
  *
  * @author qa
@@ -11,39 +9,57 @@ public class Main {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) {      
+        Car fiat = new Car();
+        fiat.showData();
+        fiat.setModel("Fiat Punto");
+        fiat.setBuildYear (2010);
+        fiat.setColor ("black");
+        fiat.setConsumption (6);
+        fiat.setMaxSpeed (180);
+        fiat.setCurrentFuel (20);
+        fiat.setMaxFuel (45);   
         
-        System.out.println("HelloWorld!");
-        System.out.println("MatijaLosic");
+        Car ford = new Car();
+        ford.showData();
+        ford.setModel("Mustang GT");
+        ford.setBuildYear (2016);
+        ford.setColor ("Black with red stripes");
+        ford.setConsumption (20);
+        ford.setMaxSpeed (280);
+        ford.setCurrentFuel (50);
+        ford.setMaxFuel (100);  
         
-        int age = 5;
+        Car golf = new Car("Golf2", 1990, "dark grey", 35);
+        golf.showData();
+        golf.setModel("Golf2");
+        golf.setColor("dark grey");
+        golf.setBuildYear (1990);
+        golf.setConsumption(7);
+        golf.setCurrentFuel(35);
+        golf.setMaxSpeed(140);
+        golf.setMaxFuel(50);
+        //System.out.println("Model: "+ ford.model);
+        //System.out.println("Build Year: "+ ford.buildYear);
+        //System.out.println("Color: "+ ford.color);
+        //System.out.println("Consumption: "+ ford.consumption);
+        //System.out.println("Max Speed: "+ ford.maxSpeed);
+        //System.out.println("Current Fuel: "+ ford.currentFuel);
+        //System.out.println("Max Fuel: "+ ford.maxFuel);
         
-        if (age > 18) {
-            System.out.println("Osoba je punoletna.");
-            } else {
-            System.out.println("Osoba je maloletna");
-        }
+        //fiat.showData();
         
-        System.out.print("Unesite broj godina: ");
-        Scanner input = new Scanner(System.in);
-        int userAge = input.nextInt();
+        //ford.model = "Ford Fiesta";
+        //ford.setModel("Ford Fiesta");
+        //ford.buildYear = 2015;
         
-        System.out.println("Korisnik je uneo: " + userAge);
+        //ford.showData();
         
-        if (userAge < 0 && userAge > 150) {
-            System.out.println("Invalid");
-        } else if (userAge > 0 && userAge <= 5) {
-            System.out.println("Baby");
-        } else if (userAge <= 11) {
-            System.out.println("Kid");
-        } else if (userAge <=17) {
-            System.out.println("Teen");
-        } else if (userAge >= 18) {
-            System.out.println("Adult");
-        } 
-        }
-        }
-         
+        //System.out.println("Model: " + ford.getModel());
+}
+
+}
+       
         
     
     
